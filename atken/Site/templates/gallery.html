@@ -92,7 +92,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-area" style="padding-left:10px">
                                 <a href="#" class="temp-logo">
-                                    <img src="/static/img/logo/logo.jpg" width="150" height="10" alt="logo" class="img-fluid">
+                                    <img src="/static/img/logo/logo.png" width="150" height="10" alt="logo" class="img-fluid">
                                 </a>
                             </div>
                         </div>
@@ -342,31 +342,34 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="personal-info-box2">
-                            <h2 class="section-title">New York City</h2>
+                            <h2 class="section-title">Ernankulam dist. Aluva</h2>
                             <ul class="information-list">
-                                <li>120 F 2th Yt, New York NY 1259</li>
-                                <li>+1 (212) 333-7888</li>
-                                <li>email@example.com</li>
+                                <li>COMPANYPADY, S.P.W ROAD,</li>
+                                <li>pincode : 683106 </li>
+                                <li>9446519520</li>
+                                <li>Atkkly@gmail.com</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="personal-info-box2">
-                            <h2 class="section-title">Melbourne City</h2>
+                            <h2 class="section-title">Malappuram dist. Ayikkarappadi</h2>
                             <ul class="information-list">
-                                <li>120 F 2th Yt, New York NY 1259</li>
-                                <li>+1 (212) 333-7888</li>
-                                <li>email@example.com</li>
+                                <li>Cherukavu Panchayath, Kaithakunda,</li>
+                                <li>pincode : 673637 </li>
+                                <li>9446483650</li>
+                                <li>atkcalicut@gmail.com</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="personal-info-box2">
-                            <h2 class="section-title">Melbourne City</h2>
+                            <h2 class="section-title">Kannur dist. Thalassery</h2>
                             <ul class="information-list">
-                                <li>120 F 2th Yt, New York NY 1259</li>
-                                <li>+1 (212) 333-7888</li>
-                                <li>email@example.com</li>
+                                <li>Kanak Complex, Near Girls school high, Kayyath road</li>
+                                <li>pincode : 670101</li>
+                                <li>8606777701</li>
+                                <li>atkdoc@gmail.com</li>
                             </ul>
                         </div>
                     </div>
@@ -444,10 +447,21 @@
                         <div class="footer-right">
                             <h2 class="footer-title">Get Updates!</h2>
                             <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                            <form action="{% url 'newsLetter' %}" method="post">
+                                {% csrf_token %}
+                                {% if messages %}
+                                <div class="form-group color03 ">
+                                    <!-- <ul class="messages align-content"> -->
+                                        {% for message in messages %}
+                                            <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+                                        {% endfor %}
+                                    <!-- </ul> -->
+                                </div>
+                            {% endif %}
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter your Email">
+                                <input type="email" class="form-control" name="email" placeholder="Enter your Email">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
                                             class="fas fa-angle-right"></i></button>
                                 </div>
                             </div>

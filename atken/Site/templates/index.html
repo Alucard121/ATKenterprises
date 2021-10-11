@@ -98,7 +98,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-area" style="padding-left:10px">
                                 <a href="#" class="temp-logo">
-                                    <img src="/static/img/logo/logo.jpg" width="150" height="10" alt="logo" class="img-fluid">
+                                    <img src="/static/img/logo/logo.png" width="150" height="10" alt="logo" class="img-fluid">
                                 </a>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                                     <li class="header-number">
                                         <div class="media">
                                             <div class="item-icon">
-                                                <i class="far fa-comments"></i>
+                                                <i style="color: rgb(0, 180, 81); " class="far fa-comments"></i>
                                             </div>
                                             <div class="media-body">
                                                 <div class="item-label">Whatsapp Number</div>
@@ -137,18 +137,7 @@
                                             </div>
                                         </div>
                                     </li>
-        <!-- whatsapp  -->
-        <script>    
-            function sendWhatsapp(){
-                var name = document.getElementById('txtName').value;
-                // var email = document.getElementById('txtEmail').value;
-                var msg = document.getElementById('txtMsg').value;
-                var message = encodeURIComponent(name) + "%0a" +  encodeURIComponent(msg);
-                var whatsapp_url = "whatsapp://send/?phone=+918606444438&text=*Hello*,%0a" + message;
-                window.location.href = whatsapp_url;
-            }
-        </script>
-        <!-- whatsapp  -->
+        <!--  -->
                                     <!-- <li class="offcanvas-menu-trigger-wrap">
                                         <button type="button" class="offcanvas-menu-btn menu-status-open">
                                             <span class="btn-icon-wrap">
@@ -178,11 +167,11 @@
             </div>
             <div class="bend niceties preview-1">
                 <div id="ensign-nivoslider-1" class="slides">
-                    <img src="/static/img/slider/slider1.png" alt="slider" width="1920" height="720"
+                    <img src="/static/img/slider/slide11.png" alt="slider" width="1920" height="720"
                         title="#slider-direction-1" />
                     <img src="/static/img/slider/slider2.png" alt="slider" width="1920" height="720"
                         title="#slider-direction-2" />
-                    <img src="/static/img/slider/slider1.png" alt="slider" width="1920" height="720"
+                    <img src="/static/img/slider/slider3.png" alt="slider" width="1920" height="720"
                         title="#slider-direction-3" />
                 </div>
                 <div id="slider-direction-1" class="t-cn slider-direction">
@@ -194,8 +183,8 @@
                                 <div class="item-paragraph">Arousing Comfort through Inspiring Designs, Timeless
                                     Elegance and Countless Impressions.</div>
                                 <ul class="item-btn">
-                                    <li><a href="service1.html">Free Consulting<i
-                                                class="fas fa-long-arrow-alt-right"></i></a></li>
+                                    <!-- <li><a href="service1.html">Free Consulting<i
+                                                class="fas fa-long-arrow-alt-right"></i></a></li> -->
                                     <li><a href="#" class="circle-btn"><span class="circle-icon"><i
                                                     class="fas fa-play-circle"></i>Watch The Video</span></a></li>
                                 </ul>
@@ -212,8 +201,8 @@
                                 <div class="item-paragraph">The Pioneer Dealers and Providers of Complete Home Solutions
                                     with Unwavering Commitment.</div>
                                 <ul class="item-btn">
-                                    <li><a href="service2.html">Free Consulting<i
-                                                class="fas fa-long-arrow-alt-right"></i></a></li>
+                                    <!-- <li><a href="service2.html">Free Consulting<i
+                                                class="fas fa-long-arrow-alt-right"></i></a></li> -->
                                     <li><a href="#" class="circle-btn"><span class="circle-icon"><i
                                                     class="fas fa-play-circle"></i>Watch The Video</span></a></li>
                                 </ul>
@@ -230,8 +219,8 @@
                                 <div class="item-paragraph">The Art of Crafting Beautiful Homes with Innovative and
                                     Exclusive Elegance.</div>
                                 <ul class="item-btn">
-                                    <li><a href="service1.html">Free Consulting<i
-                                                class="fas fa-long-arrow-alt-right"></i></a></li>
+                                    <!-- <li><a href="service1.html">Free Consulting<i
+                                                class="fas fa-long-arrow-alt-right"></i></a></li> -->
                                     <li><a href="#" class="circle-btn"><span class="circle-icon"><i
                                                     class="fas fa-play-circle"></i>Watch The Video</span></a></li>
                                 </ul>
@@ -249,49 +238,49 @@
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-md-6">
                         <div class="financo-activities-box1">
-                            <div class="item-img-round">
+                            <!-- <div class="item-img-round">
                                 <img src="/static/img/figure/figure39.png" alt="figure" height="81" width="81">
                                 <div class="item-img">
                                     <img src="/static/img/figure/figure41.png" alt="figure" height="45" width="47">
                                 </div>
-                            </div>
-                            <h2 class="heading-title"><a href="service1.html">QUALITY PRODUCTS</a></h2>
+                            </div> -->
+                            <h2 class="heading-title"><a>QUALITY PRODUCTS</a></h2>
                             <p>A wide range of superior and excellent products offered by us suits to the ever changing
                                 demands of the customers in Kerala.</p>
                             <div class="item-button">
-                                <a href="single-service1.html" class="item-btn">+ <span>Read More</span></a>
+                                <a href="{% url 'about' %}" class="item-btn">+ <span>Read More</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="financo-activities-box1">
-                            <div class="item-img-round">
+                            <!-- <div class="item-img-round">
                                 <img src="/static/img/figure/figure39.png" alt="figure" height="81" width="81">
                                 <div class="item-img">
                                     <img src="/static/img/figure/figure42.png" alt="figure" height="41" width="45">
                                 </div>
-                            </div>
-                            <h2 class="heading-title"><a href="service1.html">STANDARD DESIGNS</a></h2>
+                            </div> -->
+                            <h2 class="heading-title"><a>STANDARD DESIGNS</a></h2>
                             <p>We offer contemporary styles and designs and patterns which allows you to give a
                                 personalised touch of elegance to your favourite space.</p>
                             <div class="item-button">
-                                <a href="single-service2.html" class="item-btn">+ <span>Read More</span></a>
+                                <a href="{% url 'about' %}" class="item-btn">+ <span>Read More</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="financo-activities-box1 financo-activities-box3">
-                            <div class="item-img-round">
+                            <!-- <div class="item-img-round">
                                 <img src="/static/img/figure/figure39.png" alt="figure" height="81" width="81">
                                 <div class="item-img">
                                     <img src="/static/img/figure/figure43.png" alt="figure" height="45" width="49">
                                 </div>
-                            </div>
-                            <h2 class="heading-title"><a href="service1.html">TOP CLASS BRANDS</a></h2>
+                            </div> -->
+                            <h2 class="heading-title"><a>TOP CLASS BRANDS</a></h2>
                             <p>All our collections varying from simple patterns to decorous designs are from the first
                                 class brands which would go beyond your expectations and dreams.</p>
                             <div class="item-button">
-                                <a href="single-service1.html" class="item-btn">+ <span>Read More</span></a>
+                                <a href="{% url 'about' %}" class="item-btn">+ <span>Read More</span></a>
                             </div>
                         </div>
                     </div>
@@ -301,7 +290,7 @@
         <!--=====================================-->
         <!--=            About-finnaco Start    =-->
         <!--=====================================-->
-        <section class="about-finnaco-wrap1">
+        <section class="about-finnaco-wrap1" style="padding-bottom:30px ;">
             <div class="background-shape6">
                 <img src="/static/img/figure/figure32.png" alt="figure" width="404" height="216">
             </div>
@@ -309,7 +298,7 @@
                 <img src="/static/img/figure/figure29.png" alt="figure" width="747" height="256">
             </div>
             <div class="background-shape8">
-                <img src="/static/img/figure/figure33.png" alt="figure" width="783" height="439">
+                <!-- <img src="/static/img/figure/figure33.png" alt="figure" width="783" height="439"> -->
             </div>
             <div class="container">
                 <div class="row">
@@ -343,7 +332,7 @@
                     <div class="col-lg-7 col-md-12">
                         <div class="about-box2">
                             <div class="about-img">
-                                <img src="/static/img/about/about1.png" alt="figure" width="465" height="596">
+                                <img src="/static/img/logo/logo.jpg" alt="figure" width="465" height="596" style="padding-bottom:10px ;height: 500px;">
                             </div>
                         </div>
                     </div>
@@ -704,7 +693,7 @@
                                 <h3 class="heading-title">{{x.title}}</h3>
                                 <p class="portfolio-para">{{x.description}}</p>
                                 <div class="item-button">
-                                    <a href="portfolio2.html" class="item-btn">+ <span>Read More</span></a>
+                                <a href="{% url 'gallery' %}" class="item-btn">+ <span>Read More</span></a>
                                 </div>
                             </div>
                         </div>
@@ -773,7 +762,7 @@
             <div class="row">
                 <div class="col-lg-5 col-md-12">
                     <div class="company-profit-box1">
-                        <p class="section-subtitle">Company Profit Chart</p>
+                        <!-- <p class="section-subtitle">Company Profit Chart</p> -->
                         <h2 class="section-title">ATK Buildmart offers End to End Tile Solutions</h2>
                         <p>Finance when an unknown printer took a galley of type and scrambled it to make a type
                             specimen book. It has survived not only five centuriFinance.</p>
@@ -793,82 +782,9 @@
             </div>
         </div>
     </section>
-    <!--=====================================-->
-    <!--=            Call-back Start        =-->
-    <!--=====================================-->
-    <!-- <section class="call-back-wrap">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-lg-5 col-md-12">
-                    <div class="call-back-box1">
-                        <h3 class="section-title">Request a Call Back</h3>
-                        <form class="message-box">
-                            <div class="row">
-                                <div class="form-group col-lg-12">
-                                    <input type="text" class="form-control" id="inputAddress1" placeholder="Name">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Email">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <input type="text" class="form-control" id="inputAddress3" placeholder="Phone">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <textarea name="comment" id="message" class="form-control" placeholder="Message"
-                                        cols="30" rows="4"></textarea>
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <a href="about.html" class="item-btn">Submit Now</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-12">
-                    <div class="call-back-box2">
-                        <div class="item-img">
-                            <img src="/static/img/blog/blog4.jpg" alt="blog" width="690" height="582">
-                            <div class="call-img">
-                                <img src="/static/img/figure/figure11.png" alt="figure" width="145" height="295">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--=====================================-->
-    <!--=            Location Start         =-->
-    <!--=====================================-->
-    <!-- <section class="location-wrap-layout1">
-        <div class="container">
-            <div class="item-heading">
-                <p class="item-subtitle">Our Trusted Clients</p>
-                <h2 class="section-heading">We’ve Situated in Different Places</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="location-box">
-                        <div class="item-img">
-                            <img src="/static/img/figure/figure10.png" alt="figure" width="805" height="377">
-                            <div class="map-icon">
-                                <ul>
-                                    <li><i class="fas fa-map-marker-alt"></i></li>
-                                    <li><i class="fas fa-map-marker-alt"></i></li>
-                                    <li><i class="fas fa-map-marker-alt"></i></li>
-                                    <li><i class="fas fa-map-marker-alt"></i></li>
-                                    <li><i class="fas fa-map-marker-alt"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--=====================================-->
-    <!--=            Testimonial Start      =-->
-    <!--=====================================-->
+ 
+
+
     <section class="testimonial-wrap1">
         <div class="container">
             <div class="testimonial-box1">
@@ -921,7 +837,7 @@
     <!--=====================================-->
     <!--=            Blog Start             =-->
     <!--=====================================-->
-    <section class="blog-wrap-layout1">
+    <!--<section class="blog-wrap-layout1">
         <div class="section-top-img">
             <img src="/static/img/figure/figure7.png" alt="figure" width="309" height="147">
         </div>
@@ -938,7 +854,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="blog-box1">
                         <div class="item-img">
@@ -975,9 +891,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
-    </section>
+    </section>-->
     <!--=====================================-->
     <!--=          Personal Start           =-->
     <!--=====================================-->
@@ -1036,7 +952,10 @@
                 </div>
                 <div class="col-xl-8 col-lg-4 d-xl-block d-none">
                     <div class="location-img">
-                        <div id="googleMap" class="google-map"></div>
+                        <!-- <div id="googleMap"></div>
+                        <div id="googleMap" class="google-map"></div> -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.830874339712!2d75.4645300148099!3d11.776956091647428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ2JzM3LjAiTiA3NcKwMjgnMDAuMiJF!5e0!3m2!1sen!2sin!4v1633929687785!5m2!1sen!2sin" 
+                        style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%); height: 750px; width: 900px;" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -1107,10 +1026,21 @@
                     <div class="footer-right">
                         <h2 class="footer-title">Get Updates!</h2>
                         <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                        <form action="{% url 'newsLetter' %}" method="post">
+                            {% csrf_token %}
+                            {% if messages %}
+                            <div class="form-group color03 ">
+                                <!-- <ul class="messages align-content"> -->
+                                    {% for message in messages %}
+                                        <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+                                    {% endfor %}
+                                <!-- </ul> -->
+                            </div>
+                        {% endif %}
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your Email">
+                            <input type="email" class="form-control" name="email" placeholder="Enter your Email">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
                                         class="fas fa-angle-right"></i></button>
                             </div>
                         </div>

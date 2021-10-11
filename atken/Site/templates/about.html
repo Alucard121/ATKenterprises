@@ -95,7 +95,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-area" style="padding-left:10px">
                                 <a href="#" class="temp-logo">
-                                    <img src="/static/img/logo/logo.jpg" width="150" height="10" alt="logo" class="img-fluid">
+                                    <img src="/static/img/logo/logo.png" width="150" height="10" alt="logo" class="img-fluid">
                                 </a>
                             </div>
                         </div>
@@ -134,18 +134,7 @@
                                             </div>
                                         </div>
                                     </li>
-        <!-- whatsapp  -->
-        <script>    
-            function sendWhatsapp(){
-                var name = document.getElementById('txtName').value;
-                // var email = document.getElementById('txtEmail').value;
-                var msg = document.getElementById('txtMsg').value;
-                var message = encodeURIComponent(name) + "%0a" +  encodeURIComponent(msg);
-                var whatsapp_url = "whatsapp://send/?phone=+918606444438&text=*Hello*,%0a" + message;
-                window.location.href = whatsapp_url;
-            }
-        </script>
-        <!-- whatsapp  -->
+    
                                     <!-- <li class="offcanvas-menu-trigger-wrap">
                                         <button type="button" class="offcanvas-menu-btn menu-status-open">
                                             <span class="btn-icon-wrap">
@@ -197,7 +186,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="about-box4">
                             <p class="heading-subtitle">About ATK</p>
-                            <h2 class="heading-title">Finance Business Services Your Future Success</h2>
+                            <h2 class="heading-title">OUR JOURNEY OF SUCCESS</h2>
                             <p>We are known in the industry for exclusive items and cater to both the upper and middle market sector.Today ATK Buildmart is a fashion leader in the retail of sanitary ware, taps, bathtubs, toilets, bidets, basins, bathroom accessories, tiles and other related products in Kerala. From its origins and right through to the present, ATK Enterprises has maintained the highest standards of business values, integrity, understanding, excellence, unity, responsibility and service within the trading circle. Dedication to these ideals, an unwavering commitment to perform to the highest operational standards and a bold vision for the future is the foundation of ATK Enterprises philosophy.</p>
                             <a href="#al-1"><div class="about-layout" >
                                 <div class="media">
@@ -206,8 +195,8 @@
                                     </div>
                                     <div class="media-body">
                                         <div class="item-content">
-                                            <h3 class="item-title">Financial Analysis</h3>
-                                            <p>Bookan unknown printer took galley type and scramble make.</p>
+                                            <h3 class="item-title">OUR JOURNEY</h3>
+                                            <!-- <p>Bookan unknown printer took galley type and scramble make.</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -219,8 +208,8 @@
                                     </div>
                                     <div class="media-body">
                                         <div class="item-content">
-                                            <h3 class="item-title">Financial Analysis</h3>
-                                            <p>Bookan unknown printer took galley type and scramble make.</p>
+                                            <h3 class="item-title">OUR STRENGTH</h3>
+                                            <!-- <p>Bookan unknown printer took galley type and scramble make.</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +238,7 @@
         <!--=====================================-->
         <!--=            Company-value Start    =-->
         <!--=====================================-->
-        <section class="company-value-wrap">
+        <!-- <section class="company-value-wrap">
             <div class="container">
                 <div class="item-content">
                     <h2 class="section-title">Company Core Values</h2>
@@ -295,7 +284,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--=====================================-->
         <!--=           Progress-bar Start      =-->
         <!--=====================================-->
@@ -659,10 +648,21 @@
                         <div class="footer-right">
                             <h2 class="footer-title">Get Updates!</h2>
                             <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                            <form action="{% url 'newsLetter' %}" method="post">
+                                {% csrf_token %}
+                                {% if messages %}
+                                <div class="form-group color03 ">
+                                    <!-- <ul class="messages align-content"> -->
+                                        {% for message in messages %}
+                                            <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+                                        {% endfor %}
+                                    <!-- </ul> -->
+                                </div>
+                            {% endif %}
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter your Email">
+                                <input type="email" class="form-control" name="email" placeholder="Enter your Email">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
                                             class="fas fa-angle-right"></i></button>
                                 </div>
                             </div>

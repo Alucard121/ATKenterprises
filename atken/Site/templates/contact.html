@@ -90,7 +90,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-area" style="padding-left:10px">
                                 <a href="#" class="temp-logo">
-                                    <img src="/static/img/logo/logo.jpg" width="150" height="10" alt="logo" class="img-fluid">
+                                    <img src="/static/img/logo/logo.png" width="150" height="10" alt="logo" class="img-fluid">
                                 </a>
                             </div>
                         </div>
@@ -129,18 +129,7 @@
                                             </div>
                                         </div>
                                     </li>
-        <!-- whatsapp  -->
-        <script>    
-            function sendWhatsapp(){
-                var name = document.getElementById('txtName').value;
-                // var email = document.getElementById('txtEmail').value;
-                var msg = document.getElementById('txtMsg').value;
-                var message = encodeURIComponent(name) + "%0a" +  encodeURIComponent(msg);
-                var whatsapp_url = "whatsapp://send/?phone=+918606444438&text=*Hello*,%0a" + message;
-                window.location.href = whatsapp_url;
-            }
-        </script>
-        <!-- whatsapp  -->
+        
                                     <!-- <li class="offcanvas-menu-trigger-wrap">
                                         <button type="button" class="offcanvas-menu-btn menu-status-open">
                                             <span class="btn-icon-wrap">
@@ -236,7 +225,8 @@
                 <div class="row gutters-40">
                     <div class="col-lg-6">
                         <div class="contact-box2">
-                            <div id="googleMap" class="google-map" style="width:100%; height:612px; border-radius:4px;"></div>
+                            <!-- <div id="googleMap" class="google-map" style="width:100%; height:612px; border-radius:4px;"></div> -->
+                            <iframe style=" width:100%; height:705px; border-radius:4px; " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.830874339712!2d75.4645300148099!3d11.776956091647428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ2JzM3LjAiTiA3NcKwMjgnMDAuMiJF!5e0!3m2!1sen!2sin!4v1633929687785!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -440,10 +430,21 @@
                         <div class="footer-right">
                             <h2 class="footer-title">Get Updates!</h2>
                             <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                            <form action="{% url 'newsLetter' %}" method="post">
+                                {% csrf_token %}
+                                {% if messages %}
+                                <div class="form-group color03 ">
+                                    <!-- <ul class="messages align-content"> -->
+                                        {% for message in messages %}
+                                            <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+                                        {% endfor %}
+                                    <!-- </ul> -->
+                                </div>
+                            {% endif %}
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter your Email">
+                                <input type="email" class="form-control" name="email" placeholder="Enter your Email">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
                                             class="fas fa-angle-right"></i></button>
                                 </div>
                             </div>
